@@ -1,0 +1,96 @@
+{
+  "company": {
+    "name": "ZEIGO Services",
+    "tagline": "Travel, Manpower & Utility Services",
+    "headline": "We help you keep your place clean",
+    "overview": "ZEIGO SERVICES is a professional business service firm with proven expertise in multiple industries such as travel and housekeeping.",
+    "vision": "To provide customers with the highest level of services and be the best in the industry.",
+    "mission": "Be loyal, give the best advice, and deliver top-quality services at very competitive prices.",
+    "contact": {
+      "address": "Shop No 406, Prabhat Centre, Anex Building, Sector 1A, CBD Belapur, Navi Mumbai - 400 614, India",
+      "landline": "+91 22 2758 5454",
+      "mobiles": ["+91 9969925454", "+91 9969935454"],
+      "email": "info@zeigoservices.com",
+      "website": "https://www.zeigoservices.com"
+    }
+  },
+  "services": [
+    {
+      "slug": "hospital-facility-management",
+      "title": "Hospital Staff & Facility Management",
+      "summary": "Facility and hospitality staffing for hospitals & corporate offices across India.",
+      "features": [
+        "Patient guide services",
+        "Lift operations",
+        "Lobby attendants",
+        "Technical support staff",
+        "Society maintenance",
+        "Mix of ex-servicemen and civilian personnel"
+      ],
+      "image": "hospital-facility.jpg",
+      "alt": "Training session for hospital housekeeping crew"
+    },
+    {
+      "slug": "travel-services",
+      "title": "Travel Services",
+      "summary": "Audited vehicles, polite chauffeurs and flexible rental options.",
+      "features": [
+        "Audited, well-maintained cars",
+        "On-time service guarantee",
+        "Point-to-point, hourly or daily rentals",
+        "Clean new cabs with trained, cultured chauffeurs",
+        "Short- and long-distance availability",
+        "Cash, Paytm; card payments coming soon",
+        "Zero driver refusals or hidden surcharges",
+        "Qualified drivers on demand"
+      ],
+      "image": "travel-fleet.jpg",
+      "alt": "White van and silver SUV representing ZEIGO fleet"
+    },
+    {
+      "slug": "hr-payroll",
+      "title": "HR Payroll & Solutions",
+      "summary": "Outsource HR, payroll and compliance so you can focus on your core business.",
+      "features": [
+        "Payroll processing & salary disbursement",
+        "Attendance tracking",
+        "Statutory compliances (PF, ESIC, PT, CL etc.)",
+        "Payslip generation",
+        "Leave & tax deduction management",
+        "FORM-16 issuance",
+        "Fully customisable packages"
+      ],
+      "image": "hr-payroll.jpg",
+      "alt": "Hands working on payroll with notebook and calculator"
+    },
+    {
+      "slug": "commercial-security",
+      "title": "Commercial Security",
+      "summary": "Ex-servicemen and civilian guards delivering full-proof security cover.",
+      "features": [
+        "Security manpower supply",
+        "Coverage for plants, warehouses, hospitals, ports, retail & corporate offices",
+        "Guards with rich defence background",
+        "Employee vetting and role-specific training"
+      ],
+      "image": "commercial-security.jpg",
+      "alt": "Security guard with walkie-talkie in lobby"
+    },
+    {
+      "slug": "garden-maintenance",
+      "title": "Garden Maintenance & Development",
+      "summary": "Experienced gardeners keeping your landscapes healthy and vibrant.",
+      "features": [
+        "Routine garden maintenance",
+        "Landscape development projects",
+        "Technical staff with proven client success"
+      ],
+      "image": "garden-maintenance.jpg",
+      "alt": "Gardener tending flower beds"
+    }
+  ],
+  "assets": {
+    "logo": "zeigo-logo.png",
+    "heroImage": "cleaning-hero.jpg"
+  }
+}
