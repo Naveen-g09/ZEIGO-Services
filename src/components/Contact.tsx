@@ -1,5 +1,6 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Globe, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Globe, Clock, Navigation } from 'lucide-react';
+import LeafletMap from './LeafletMap';
 
 interface WhatsAppInfo {
   number: string;
@@ -138,37 +139,37 @@ const Contact: React.FC<ContactProps> = ({ contact }) => {
             </div>
           </div>
 
-          <div className="relative rounded-[2.5rem] border border-blue-100 bg-white p-6 shadow-lg">
-            <h3 className="text-lg font-semibold text-slate-900">Location preview</h3>
-            <p className="mt-2 text-sm text-slate-600">Embed an interactive map here to guide visitors to the CBD Belapur office.</p>
-            <div className="mt-6 h-80 rounded-3xl bg-gradient-to-br from-slate-200 via-blue-100 to-slate-50">
-              <div className="flex h-full flex-col items-center justify-center gap-3 text-center">
-                <MapPin className="h-12 w-12 text-blue-400" />
-                <p className="text-sm font-semibold text-slate-600">Map placeholder</p>
-                <p className="text-xs text-slate-500">CBD Belapur, Navi Mumbai</p>
+          <div className="space-y-6">
+            <div className="relative rounded-[2.5rem] border border-blue-100 bg-white p-6 shadow-lg">
+              <h3 className="text-lg font-semibold text-slate-900">Visit us at CBD Belapur</h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Use the interactive map to find detailed directions to our headquarters inside Prabhat Centre.
+              </p>
+              <div className="mt-6 h-80">
+                <LeafletMap
+                  center={[19.02501538216906, 73.03832257601033]}
+                  popupLabel="ZEIGO Services — Prabhat Centre"
+                  className="shadow-lg"
+                />
+              </div>
+              <div className="mt-6 rounded-2xl bg-blue-50/80 p-4 text-sm text-slate-600">
+                <p className="font-semibold text-slate-700">Travel tips</p>
+                <ul className="mt-3 space-y-2 text-xs leading-relaxed text-slate-500">
+                  <li className="flex items-start gap-2">
+                    <Navigation className="mt-0.5 h-4 w-4 text-blue-500" />
+                    <span>Five-minute walk from CBD Belapur Station (East Exit).</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Navigation className="mt-0.5 h-4 w-4 text-blue-500" />
+                    <span>Enter Prabhat Centre and take the elevator to Shop No. 69 on Level 1.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Navigation className="mt-0.5 h-4 w-4 text-blue-500" />
+                    <span>Guest parking is available inside the complex; ask security for ZEIGO Services.</span>
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
-
-          <div className="relative rounded-[2.5rem] border border-blue-100 bg-white p-6 shadow-lg">
-            <h3 className="text-lg font-semibold text-slate-900">Visit us at CBD Belapur</h3>
-            <p className="mt-2 text-sm text-slate-600">
-              Use the interactive Google Map to find detailed directions to our headquarters inside Prabhat Centre.
-            </p>
-            <div className="mt-6 aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-lg">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.8798496302143!2d73.03832257601033!3d19.02501538216906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c24cb2194295%3A0x824884e4f8963fee!2sPrabhat%20Center!5e0!3m2!1sen!2sin!4v1762450168850!5m2!1sen!2sin"
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-                title="ZEIGO Services office location"
-                className="h-full w-full border-0"
-              />
-            </div>
-            <p className="mt-4 text-xs text-slate-500">
-              Replace this embed with an updated map link if your office location changes or if you want to highlight multiple
-              branches.
-            </p>
           </div>
         </div>
       </div>
