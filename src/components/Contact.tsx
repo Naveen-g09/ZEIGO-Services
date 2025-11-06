@@ -149,6 +149,27 @@ const Contact: React.FC<ContactProps> = ({ contact }) => {
               </div>
             </div>
           </div>
+
+          <div className="relative rounded-[2.5rem] border border-blue-100 bg-white p-6 shadow-lg">
+            <h3 className="text-lg font-semibold text-slate-900">Visit us at CBD Belapur</h3>
+            <p className="mt-2 text-sm text-slate-600">
+              Use the interactive Google Map to find detailed directions to our headquarters inside Prabhat Centre.
+            </p>
+            <div className="mt-6 aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.8798496302143!2d73.03832257601033!3d19.02501538216906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c24cb2194295%3A0x824884e4f8963fee!2sPrabhat%20Center!5e0!3m2!1sen!2sin!4v1762450168850!5m2!1sen!2sin"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                title="ZEIGO Services office location"
+                className="h-full w-full border-0"
+              />
+            </div>
+            <p className="mt-4 text-xs text-slate-500">
+              Replace this embed with an updated map link if your office location changes or if you want to highlight multiple
+              branches.
+            </p>
+          </div>
         </div>
       </div>
     </section>
