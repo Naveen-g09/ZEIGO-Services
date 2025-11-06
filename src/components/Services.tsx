@@ -17,6 +17,55 @@ interface ServicesProps {
 }
 
 const Services: React.FC<ServicesProps> = ({ services, diagramAsset }) => {
+  interface IndividualService {
+    name: string;
+    description: string;
+    asset: GalleryAsset;
+  }
+
+  const individualServices: IndividualService[] = [
+    {
+      name: 'Qualified Drivers',
+      description: 'Verified drivers available for corporate and personal travel needs.',
+      asset: {
+        storagePath: 'public/assets/gallery/specialist-drivers.jpg',
+        description: "Upload a photo representing on-demand drivers or travel support."
+      }
+    },
+    {
+      name: 'Carpenters',
+      description: 'Skilled carpenters for repairs, fittings and minor renovations.',
+      asset: {
+        storagePath: 'public/assets/gallery/specialist-carpenters.jpg',
+        description: 'Add an image showcasing carpentry work or tools.'
+      }
+    },
+    {
+      name: 'Plumbers',
+      description: 'On-call plumbers for leak fixes, maintenance and installations.',
+      asset: {
+        storagePath: 'public/assets/gallery/specialist-plumbers.jpg',
+        description: 'Use a plumbing-related image for this card.'
+      }
+    },
+    {
+      name: 'Electricians',
+      description: 'Certified electricians for safe troubleshooting and upgrades.',
+      asset: {
+        storagePath: 'public/assets/gallery/specialist-electricians.jpg',
+        description: 'Upload an electrical maintenance or safety themed image.'
+      }
+    },
+    {
+      name: 'Painters',
+      description: 'Experienced painters for touch-ups and planned repainting.',
+      asset: {
+        storagePath: 'public/assets/gallery/specialist-painters.jpg',
+        description: 'Add a painting/renovation themed image for this service.'
+      }
+    }
+  ];
+
   return (
     <section id="services" className="bg-white py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
