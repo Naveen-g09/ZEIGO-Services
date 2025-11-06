@@ -1,7 +1,6 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Globe, Clock } from 'lucide-react';
 
-
 interface WhatsAppInfo {
   number: string;
   link: string;
@@ -33,134 +32,131 @@ const WhatsAppIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({ className, ...p
   </svg>
 );
 
-
 const Contact: React.FC<ContactProps> = ({ contact }) => {
   return (
-    <section id="contact" className="py-16 lg:py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Get in Touch
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Ready to discuss your service needs? Contact us today for a consultation. 
-            We're here to help you find the perfect solution for your business.
+    <section id="contact" className="bg-slate-50 py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-blue-700">Contact</p>
+          <h2 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">Let's connect</h2>
+          <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-slate-600">
+            Ready to discuss your service needs? Contact us today for a consultation. We're here to help you find the perfect manpower
+            solution for your business.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
-              <div className="space-y-6">
-                {/* Address */}
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center">
-                    <MapPin className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Address</h4>
-                    <p className="text-gray-600 leading-relaxed">{contact.address}</p>
-                  </div>
+        <div className="mt-16 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+          <div className="space-y-6">
+            <div className="grid gap-6 rounded-3xl bg-white p-8 shadow-xl shadow-blue-100/40">
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-blue-100 text-blue-700">
+                  <MapPin className="h-6 w-6" />
                 </div>
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">Office</p>
+                  <h3 className="mt-1 text-lg font-semibold text-slate-900">Headquarters</h3>
+                  <p className="mt-2 max-w-md text-sm leading-relaxed text-slate-600">{contact.address}</p>
+                </div>
+              </div>
 
-                {/* Phone Numbers */}
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-teal-100 text-teal-700 rounded-lg flex items-center justify-center">
-                    <Phone className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                    
-                    {contact.mobiles.map((mobile, index) => (
-                      <p key={index} className="text-gray-600">{mobile}</p>
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-700">
+                  <Phone className="h-6 w-6" />
+                </div>
+                <div className="w-full">
+                  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-600">Call</p>
+                  <h3 className="mt-1 text-lg font-semibold text-slate-900">Direct lines</h3>
+                  <div className="mt-2 grid gap-2 sm:grid-cols-2">
+                    {contact.mobiles.map((mobile) => (
+                      <p key={mobile} className="rounded-xl bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-700">
+                        {mobile}
+                      </p>
                     ))}
                   </div>
                 </div>
+              </div>
 
-                 {contact.whatsapp && (
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center">
-                      <WhatsAppIcon className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">WhatsApp</h4>
-                      <a
-                        href={contact.whatsapp.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center space-x-2 text-green-600 hover:text-green-700 hover:underline font-medium"
-                      >
-                        <span>{contact.whatsapp.number}</span>
-                      </a>
-                    </div>
-                  </div>
-                )}
-
-                {/* Email */}
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-amber-100 text-amber-700 rounded-lg flex items-center justify-center">
-                    <Mail className="h-6 w-6" />
+              {contact.whatsapp && (
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-green-100 text-green-600">
+                    <WhatsAppIcon className="h-6 w-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                    <p className="text-gray-600">{contact.email}</p>
-                  </div>
-                </div>
-
-                {/* Website */}
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 text-green-700 rounded-lg flex items-center justify-center">
-                    <Globe className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Website</h4>
-                    <a 
-                      href={contact.website} 
-                      target="_blank" 
+                    <p className="text-sm font-semibold uppercase tracking-[0.3em] text-green-600">WhatsApp</p>
+                    <a
+                      href={contact.whatsapp.link}
+                      target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-700 hover:underline"
+                      className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-green-700 hover:underline"
                     >
-                      {contact.website}
+                      {contact.whatsapp.number}
                     </a>
                   </div>
                 </div>
+              )}
 
-                {/* Business Hours */}
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-purple-100 text-purple-700 rounded-lg flex items-center justify-center">
-                    <Clock className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Business Hours</h4>
-                    <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    <p className="text-gray-600">Saturday: 9:00 AM - 2:00 PM</p>
-                    <p className="text-gray-600">Sunday: Closed</p>
-                  </div>
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-amber-100 text-amber-700">
+                  <Mail className="h-6 w-6" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-600">Email</p>
+                  <a href={`mailto:${contact.email}`} className="mt-2 inline-block text-sm font-semibold text-slate-700 hover:underline">
+                    {contact.email}
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-purple-100 text-purple-700">
+                  <Globe className="h-6 w-6" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-purple-600">Website</p>
+                  <a
+                    href={contact.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-block text-sm font-semibold text-blue-700 hover:underline"
+                  >
+                    {contact.website}
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-sky-100 text-sky-700">
+                  <Clock className="h-6 w-6" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Business hours</p>
+                  <p className="mt-2 text-sm text-slate-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                  <p className="text-sm text-slate-600">Saturday: 9:00 AM - 2:00 PM</p>
+                  <p className="text-sm text-slate-600">Sunday: Closed</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Map Placeholder */}
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div className="p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Our Location</h3>
+          <div className="relative rounded-[2.5rem] border border-blue-100 bg-white p-6 shadow-lg">
+            <h3 className="text-lg font-semibold text-slate-900">Visit us at CBD Belapur</h3>
+            <p className="mt-2 text-sm text-slate-600">
+              Use the interactive Google Map to find detailed directions to our headquarters inside Prabhat Centre.
+            </p>
+            <div className="mt-6 aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.8798496302143!2d73.03832257601033!3d19.02501538216906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c24cb2194295%3A0x824884e4f8963fee!2sPrabhat%20Center!5e0!3m2!1sen!2sin!4v1762450168850!5m2!1sen!2sin"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                title="ZEIGO Services office location"
+                className="h-full w-full border-0"
+              />
             </div>
-            <div className="h-96 bg-gray-200 relative overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-50 to-teal-50">
-                <div className="text-center">
-                  <MapPin className="h-16 w-16 text-blue-400 mx-auto mb-4" />
-                  <p className="text-gray-600 font-medium">Interactive Map</p>
-                  <p className="text-gray-500 text-sm mt-2">CBD Belapur, Navi Mumbai</p>
-                </div>
-              </div>
-              {/* Simulated map markers */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div className="w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
-              </div>
-            </div>
+            <p className="mt-4 text-xs text-slate-500">
+              Replace this embed with an updated map link if your office location changes or if you want to highlight multiple
+              branches.
+            </p>
           </div>
         </div>
       </div>

@@ -3,11 +3,12 @@ import { Menu, X } from 'lucide-react';
 
 interface HeaderProps {
   companyName: string;
+  tagline: string;
   logoSrc?: string;
   onNavigate: (section: string) => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ companyName, logoSrc, onNavigate }) => {
+const Header: React.FC<HeaderProps> = ({ companyName, tagline, logoSrc, onNavigate }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
@@ -23,28 +24,37 @@ const Header: React.FC<HeaderProps> = ({ companyName, logoSrc, onNavigate }) => 
   };
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="sticky top-0 z-50 border-b border-blue-50 bg-white/95 backdrop-blur">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex items-center justify-between py-4">
           {/* Logo and Company Name */}
           <div className="flex items-center space-x-3">
-            (
+            {logoSrc ? (
               <img
                 src={logoSrc}
                 alt={`${companyName} logo`}
-                className="h-10 w-auto"
+                className="h-12 w-12 rounded-full bg-white object-contain shadow-sm ring-1 ring-blue-100"
               />
-            ) 
-            <h1 className="text-xl font-bold text-gray-900">{companyName}</h1>
+            ) : (
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-lg font-bold text-white">
+                {companyName.charAt(0)}
+              </div>
+            )}
+            <div>
+              <h1 className="text-xl font-bold text-slate-900 sm:text-2xl">{companyName}</h1>
+              <p className="hidden text-xs font-semibold uppercase tracking-[0.35em] text-blue-700 sm:block">
+                {tagline}
+              </p>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden space-x-8 md:flex">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className="text-gray-700 hover:text-blue-700 font-medium transition-colors duration-200 py-2 px-3 rounded-md hover:bg-blue-50"
+                className="rounded-full px-4 py-2 text-sm font-semibold uppercase tracking-wide text-slate-600 transition-all duration-200 hover:bg-blue-50 hover:text-blue-700"
               >
                 {item.label}
               </button>
@@ -55,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({ companyName, logoSrc, onNavigate }) => 
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-700 transition-colors duration-200 p-2"
+              className="rounded-full border border-blue-100 p-2 text-slate-600 shadow-sm transition-colors duration-200 hover:border-blue-300 hover:text-blue-700"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -70,7 +80,7 @@ const Header: React.FC<HeaderProps> = ({ companyName, logoSrc, onNavigate }) => 
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className="text-gray-700 hover:text-blue-700 font-medium transition-colors duration-200 py-2 px-3 rounded-md hover:bg-blue-50 text-left"
+                  className="rounded-lg border border-blue-50 bg-white px-4 py-3 text-left text-sm font-semibold uppercase tracking-wide text-slate-600 transition-colors duration-200 hover:bg-blue-50 hover:text-blue-700"
                 >
                   {item.label}
                 </button>
