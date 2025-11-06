@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 import companyData from './data/company.json';
 
 function App() {
-  const { company, services } = companyData;
+  const { company, services, assets } = companyData;
 
   const handleNavigate = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -22,7 +22,8 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       <Header 
-        companyName={company.name} 
+        companyName={company.name}
+        logoSrc={assets?.logo} 
         onNavigate={handleNavigate}
       />
       

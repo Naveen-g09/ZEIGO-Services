@@ -1,17 +1,20 @@
 {
   "company": {
     "name": "ZEIGO Services",
-    "tagline": "Travel, Manpower & Utility Services",
-    "headline": "We help you keep your place clean",
-    "overview": "ZEIGO SERVICES is a professional business service firm with proven expertise in multiple industries such as travel and housekeeping.",
-    "vision": "To provide customers with the highest level of services and be the best in the industry.",
-    "mission": "Be loyal, give the best advice, and deliver top-quality services at very competitive prices.",
+    "tagline": "MANPOWER FACILITY AND SECURITY SERVICES",
+    "headline": "Your reliable partner in keeping things clean, safe, secure, and on the move.",
+    "overview": "ZEIGO SERVICES is a professional business services partnership firm with proven expertise in multiple industries such as travel, event management and housekeeping facility services etc. We have a associated team members who have domain experience for more than 15 years. Zeigo Services is partnership firm founded in 2017.",
+    "vision": "To become the most trusted, respected, and reliable commercial manpower company in Navi Mumbai as well as PAN India. Our vision is to create environments where people feel completely safe and comfortable. By seamlessly blending the arts of professional housekeeping and vigilant security, we aim to be the silent partner that provides total peace of mind. With a foundation built on eight years of dedicated service, we aspire to transform every facility we touch into a pristine, secure, and welcoming space, allowing our clients to focus on what matters most to them.",
+    "mission": "To help our clients have productive, safer, and healthier environments through a robust range of cleaning services, industry-leading standards, and sustainable business practices. Our mission is to provide our clients with complete peace of mind by offering reliable and responsive housekeeping and security solutions. Leveraging our 8 years of hands-on experience, we listen to our clients' unique needs to craft tailored service plans that work. ",
     "contact": {
-      "address": "Shop No 406, Prabhat Centre, Anex Building, Sector 1A, CBD Belapur, Navi Mumbai - 400 614, India",
-      "landline": "+91 22 2758 5454",
-      "mobiles": ["+91 9969925454", "+91 9969935454"],
-      "email": "info@zeigoservices.com",
-      "website": "https://www.zeigoservices.com"
+      "address": "Shop No. 69, Prabhat Centre, Sector 1A, Near NKGSB Bank, CBD Belapur, Navi Mumbai - 400614.",
+      "mobiles": ["+91 8080664545", "+91 9594664545"],
+      "email": "infozeigoservices@gmail.com",
+      "website": "https://www.zeigoservices.com",
+      "whatsapp": {
+        "number": "+91 9969805454",
+        "link": "https://wa.me/+919969805454"
+      }
     }
   },
   "services": [
@@ -90,7 +93,7 @@
     }
   ],
   "assets": {
-    "logo": "zeigo-logo.png",
+    "logo": "/assets/zeigo-logo.png",
     "heroImage": "cleaning-hero.jpg"
   }
 }

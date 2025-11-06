@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { Menu, X, Building2 } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface HeaderProps {
   companyName: string;
+  logoSrc?: string;
   onNavigate: (section: string) => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ companyName, onNavigate }) => {
+const Header: React.FC<HeaderProps> = ({ companyName, logoSrc, onNavigate }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
@@ -26,8 +27,14 @@ const Header: React.FC<HeaderProps> = ({ companyName, onNavigate }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo and Company Name */}
-          <div className="flex items-center space-x-2">
-            <Building2 className="h-8 w-8 text-blue-700" />
+          <div className="flex items-center space-x-3">
+            (
+              <img
+                src={logoSrc}
+                alt={`${companyName} logo`}
+                className="h-10 w-auto"
+              />
+            ) 
             <h1 className="text-xl font-bold text-gray-900">{companyName}</h1>
           </div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, Mail, Phone, MapPin } from 'lucide-react';
+import {  Mail, Phone, MapPin } from 'lucide-react';
 
 interface FooterProps {
   companyName: string;
@@ -7,19 +7,26 @@ interface FooterProps {
   contact: {
     address: string;
     email: string;
-    landline: string;
+    mobiles: string;
   };
+  logoSrc?: string;
 }
 
-const Footer: React.FC<FooterProps> = ({ companyName, tagline, contact }) => {
+const Footer: React.FC<FooterProps> = ({ companyName, tagline, contact, logoSrc }) => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <Building2 className="h-8 w-8 text-blue-400" />
+            <div className="flex items-center space-x-3 mb-4">
+              (
+                <img
+                  src={logoSrc}
+                  alt={`${companyName} logo`}
+                  className="h-10 w-auto"
+                />
+              ) 
               <h3 className="text-xl font-bold">{companyName}</h3>
             </div>
             <p className="text-gray-300 mb-4">{tagline}</p>
@@ -46,7 +53,7 @@ const Footer: React.FC<FooterProps> = ({ companyName, tagline, contact }) => {
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
                 <Phone className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                <p className="text-gray-300 text-sm">{contact.landline}</p>
+                <p className="text-gray-300 text-sm">{contact.mobiles}</p>
               </div>
               <div className="flex items-start space-x-3">
                 <Mail className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
@@ -55,7 +62,7 @@ const Footer: React.FC<FooterProps> = ({ companyName, tagline, contact }) => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  CBD Belapur, Navi Mumbai, India
+                  {contact.address}
                 </p>
               </div>
             </div>
