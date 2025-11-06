@@ -130,9 +130,8 @@ const Contact: React.FC<ContactProps> = ({ contact }) => {
                 </div>
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Business hours</p>
-                  <p className="mt-2 text-sm text-slate-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p className="text-sm text-slate-600">Saturday: 9:00 AM - 2:00 PM</p>
-                  <p className="text-sm text-slate-600">Sunday: Closed</p>
+                  <p className="mt-2 text-sm text-slate-600">Open daily: 9:00 AM - 6:00 PM</p>
+                  <p className="text-sm text-slate-600">365 days a year with no holidays</p>
                 </div>
               </div>
             </div>
