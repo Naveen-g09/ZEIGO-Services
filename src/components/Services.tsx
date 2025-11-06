@@ -1,7 +1,6 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
 import ImagePlaceholder, { GalleryAsset } from './ImagePlaceholder';
-import type { SpecialistService } from '../types/company';
 
 interface Service {
   slug: string;
@@ -15,10 +14,9 @@ interface Service {
 interface ServicesProps {
   services: Service[];
   diagramAsset?: GalleryAsset;
-  individualServices?: SpecialistService[];
 }
 
-const Services: React.FC<ServicesProps> = ({ services, diagramAsset, individualServices = [] }) => {
+const Services: React.FC<ServicesProps> = ({ services, diagramAsset }) => {
   return (
     <section id="services" className="bg-white py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

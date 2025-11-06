@@ -130,9 +130,22 @@ const Contact: React.FC<ContactProps> = ({ contact }) => {
                 </div>
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600">Business hours</p>
-                  <p className="mt-2 text-sm text-slate-600">Open daily: 9:00 AM - 6:00 PM</p>
-                  <p className="text-sm text-slate-600">365 days a year with no holidays</p>
+                  <p className="mt-2 text-sm text-slate-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                  <p className="text-sm text-slate-600">Saturday: 9:00 AM - 2:00 PM</p>
+                  <p className="text-sm text-slate-600">Sunday: Closed</p>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative rounded-[2.5rem] border border-blue-100 bg-white p-6 shadow-lg">
+            <h3 className="text-lg font-semibold text-slate-900">Location preview</h3>
+            <p className="mt-2 text-sm text-slate-600">Embed an interactive map here to guide visitors to the CBD Belapur office.</p>
+            <div className="mt-6 h-80 rounded-3xl bg-gradient-to-br from-slate-200 via-blue-100 to-slate-50">
+              <div className="flex h-full flex-col items-center justify-center gap-3 text-center">
+                <MapPin className="h-12 w-12 text-blue-400" />
+                <p className="text-sm font-semibold text-slate-600">Map placeholder</p>
+                <p className="text-xs text-slate-500">CBD Belapur, Navi Mumbai</p>
               </div>
             </div>
           </div>

@@ -7,7 +7,6 @@ import Services from './components/Services';
 import Benefits from './components/Benefits';
 import MarketIntelligence from './components/MarketIntelligence';
 import Clients from './components/Clients';
-import ClientMarquee from './components/ClientMarquee';
 import Contact from './components/Contact';
 import CtaBanner from './components/CtaBanner';
 import Footer from './components/Footer';
@@ -16,8 +15,6 @@ import companyData from './data/company.json';
 function App() {
   const { company, services, assets } = companyData;
   const gallery = assets?.gallery;
-  const individualServices = company.individualServices ?? [];
-  const clients = company.clients ?? [];
 
   const handleNavigate = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -49,8 +46,6 @@ function App() {
           />
         </section>
 
-        <ClientMarquee clients={clients} />
-
         <About
           overview={company.overview}
           vision={company.vision}
@@ -61,17 +56,13 @@ function App() {
 
         <MissionVision mission={company.mission} vision={company.vision} />
 
-        <Services
-          services={services ?? []}
-          diagramAsset={gallery?.services}
-          individualServices={individualServices}
-        />
+        <Services services={services ?? []} diagramAsset={gallery?.services} />
 
         <Benefits benefits={company.benefits ?? []} />
 
         <MarketIntelligence insights={company.marketInsights} />
 
-        <Clients clients={clients} />
+        <Clients clients={company.clients ?? []} />
 
         <Contact contact={company.contact} />
 
