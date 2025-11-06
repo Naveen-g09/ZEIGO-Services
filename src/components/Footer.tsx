@@ -1,83 +1,121 @@
 import React from 'react';
-import {  Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+
+interface ContactDetails {
+  address: string;
+  email: string;
+  mobiles: string[];
+}
 
 interface FooterProps {
   companyName: string;
   tagline: string;
-  contact: {
-    address: string;
-    email: string;
-    mobiles: string;
-  };
+  contact: ContactDetails;
   logoSrc?: string;
 }
 
 const Footer: React.FC<FooterProps> = ({ companyName, tagline, contact, logoSrc }) => {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
-              (
+    <footer className="relative mt-24 bg-slate-950 text-slate-100">
+      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-sky-500 via-blue-600 to-emerald-500" />
+      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+        <div className="grid gap-12 lg:grid-cols-[1.25fr_1fr_1fr] lg:gap-16">
+          <div className="space-y-6">
+            <div className="flex items-center space-x-4">
+              {logoSrc ? (
                 <img
                   src={logoSrc}
                   alt={`${companyName} logo`}
-                  className="h-10 w-auto"
+                  className="h-14 w-14 rounded-full bg-white object-contain shadow-lg ring-2 ring-blue-500/30"
                 />
-              ) 
-              <h3 className="text-xl font-bold">{companyName}</h3>
+              ) : (
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 text-lg font-bold text-white">
+                  {companyName.charAt(0)}
+                </div>
+              )}
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.45em] text-sky-400">{tagline}</p>
+                <h3 className="mt-2 text-2xl font-bold">{companyName}</h3>
+              </div>
             </div>
-            <p className="text-gray-300 mb-4">{tagline}</p>
-            <p className="text-gray-400 leading-relaxed">
-              Professional business services with proven expertise across multiple industries. 
-              We deliver excellence you can trust, helping businesses operate smoothly and efficiently.
+            <p className="max-w-xl text-base text-slate-300">
+              Professional manpower, housekeeping, patient care, travel and security services crafted for corporate campuses,
+              hospitals and residential communities across Maharashtra.
             </p>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {contact.mobiles.map((mobile) => (
+                <div key={mobile} className="rounded-2xl bg-blue-900/30 px-4 py-3 text-sm font-semibold text-slate-200 ring-1 ring-blue-500/20">
+                  {mobile}
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-300 hover:text-white transition-colors duration-200">Home</a></li>
-              <li><a href="#about" className="text-gray-300 hover:text-white transition-colors duration-200">About</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors duration-200">Services</a></li>
-              <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors duration-200">Contact</a></li>
-            </ul>
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold uppercase tracking-[0.25em] text-sky-300">Quick Links</h4>
+            <nav className="grid gap-3 text-sm text-slate-300">
+              <a className="transition-colors duration-200 hover:text-white" href="#home">
+                Home
+              </a>
+              <a className="transition-colors duration-200 hover:text-white" href="#about">
+                About
+              </a>
+              <a className="transition-colors duration-200 hover:text-white" href="#services">
+                Services
+              </a>
+              <a className="transition-colors duration-200 hover:text-white" href="#contact">
+                Contact
+              </a>
+            </nav>
           </div>
 
-          {/* Contact Info */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-            <div className="space-y-3">
+          <div className="space-y-6">
+            <h4 className="text-lg font-semibold uppercase tracking-[0.25em] text-sky-300">Reach Us</h4>
+            <div className="space-y-4 text-sm text-slate-300">
               <div className="flex items-start space-x-3">
-                <Phone className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                <p className="text-gray-300 text-sm">{contact.mobiles}</p>
+                <Phone className="mt-0.5 h-5 w-5 flex-shrink-0 text-sky-400" />
+                <div>
+                  <p className="font-semibold text-white">Direct Lines</p>
+                  {contact.mobiles.map((mobile) => (
+                    <p key={mobile}>{mobile}</p>
+                  ))}
+                </div>
               </div>
               <div className="flex items-start space-x-3">
-                <Mail className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                <p className="text-gray-300 text-sm">{contact.email}</p>
+                <Mail className="mt-0.5 h-5 w-5 flex-shrink-0 text-sky-400" />
+                <div>
+                  <p className="font-semibold text-white">Email</p>
+                  <p>{contact.email}</p>
+                </div>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {contact.address}
-                </p>
+                <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-sky-400" />
+                <div>
+                  <p className="font-semibold text-white">Address</p>
+                  <p className="leading-relaxed">{contact.address}</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Clock className="mt-0.5 h-5 w-5 flex-shrink-0 text-sky-400" />
+                <div>
+                  <p className="font-semibold text-white">Office Hours</p>
+                  <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                  <p>Sat: 9:00 AM - 2:00 PM</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {new Date().getFullYear()} {companyName}. All rights reserved.
-            </p>
-            <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">Privacy Policy</a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">Terms of Service</a>
-            </div>
+        <div className="mt-16 flex flex-col gap-4 border-t border-white/10 pt-8 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} {companyName}. All rights reserved.</p>
+          <div className="flex gap-6">
+            <a className="transition-colors duration-200 hover:text-white" href="#">
+              Privacy Policy
+            </a>
+            <a className="transition-colors duration-200 hover:text-white" href="#">
+              Terms of Service
+            </a>
           </div>
         </div>
       </div>
