@@ -28,35 +28,34 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
-      <div className="aspect-w-16 aspect-h-9 overflow-hidden">
+    <div className="group flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+      <div className="relative aspect-[16/10] overflow-hidden">
         <img
           src={getServiceImage(service.image)}
           alt={service.alt}
-          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-slate-900/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+        <div className="absolute bottom-4 left-4 inline-flex rounded-full bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-700 shadow-sm backdrop-blur">
+          ZEIGO
+        </div>
       </div>
-      
-      <div className="p-6 lg:p-8">
-        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-700 transition-colors duration-200">
+
+      <div className="flex flex-1 flex-col p-6">
+        <h3 className="text-lg font-semibold text-slate-900 transition-colors duration-200 group-hover:text-blue-700">
           {service.title}
         </h3>
-        
-        <p className="text-gray-600 mb-6 leading-relaxed">
-          {service.summary}
-        </p>
-        
-        <div className="space-y-3">
-          <h4 className="font-semibold text-gray-900 text-sm uppercase tracking-wide">
-            Key Features
-          </h4>
-          <ul className="space-y-2">
+        <p className="mt-3 text-sm leading-relaxed text-slate-600">{service.summary}</p>
+
+        <div className="mt-6 flex-1 rounded-2xl bg-slate-50 p-4">
+          <h4 className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Key features</h4>
+          <ul className="mt-3 space-y-2">
             {service.features.map((feature, index) => (
-              <li key={index} className="flex items-start space-x-3">
-                <div className="flex-shrink-0 w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
-                  <Check className="h-3 w-3 text-green-600" />
+              <li key={index} className="flex items-start gap-3 text-sm text-slate-600">
+                <div className="mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+                  <Check className="h-3 w-3" />
                 </div>
-                <span className="text-gray-700 text-sm leading-relaxed">{feature}</span>
+                <span>{feature}</span>
               </li>
             ))}
           </ul>

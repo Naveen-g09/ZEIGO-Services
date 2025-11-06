@@ -1,14 +1,102 @@
 {
   "company": {
     "name": "ZEIGO Services",
-    "tagline": "MANPOWER FACILITY AND SECURITY SERVICES",
+    "tagline": "Manpower Facility & Security Services",
     "headline": "Your reliable partner in keeping things clean, safe, secure, and on the move.",
     "overview": "ZEIGO SERVICES is a professional business services partnership firm with proven expertise in multiple industries such as travel, event management and housekeeping facility services etc. We have a associated team members who have domain experience for more than 15 years. Zeigo Services is partnership firm founded in 2017.",
     "vision": "To become the most trusted, respected, and reliable commercial manpower company in Navi Mumbai as well as PAN India. Our vision is to create environments where people feel completely safe and comfortable. By seamlessly blending the arts of professional housekeeping and vigilant security, we aim to be the silent partner that provides total peace of mind. With a foundation built on eight years of dedicated service, we aspire to transform every facility we touch into a pristine, secure, and welcoming space, allowing our clients to focus on what matters most to them.",
-    "mission": "To help our clients have productive, safer, and healthier environments through a robust range of cleaning services, industry-leading standards, and sustainable business practices. Our mission is to provide our clients with complete peace of mind by offering reliable and responsive housekeeping and security solutions. Leveraging our 8 years of hands-on experience, we listen to our clients' unique needs to craft tailored service plans that work. ",
+    "mission": "To help our clients have productive, safer, and healthier environments through a robust range of cleaning services, industry-leading standards, and sustainable business practices. Our mission is to provide our clients with complete peace of mind by offering reliable and responsive housekeeping and security solutions. Leveraging our 8 years of hands-on experience, we listen to our clients' unique needs to craft tailored service plans that work.",
+    "leadership": {
+      "name": "Anil B. Kudale",
+      "title": "C.E.O & Director",
+      "message": "Dear Valued Clients, We have a professional business services partnership firm with proven expertise in multiple industries such as travel, event management and housekeeping facility services etc. We have a associated team members who have domain experience for more than 15 years. Zeigo Services is partnership firm founded in 2017."
+    },
+    "highlights": [
+      {
+        "value": "15+",
+        "label": "Years of Expertise"
+      },
+      {
+        "value": "8+",
+        "label": "Industries Served"
+      },
+      {
+        "value": "24/7",
+        "label": "Support Availability"
+      }
+    ],
+    "benefits": [
+      {
+        "title": "Efficient & streamlined processes",
+        "description": "We optimise manpower deployment, workflows and reporting so that operations remain smooth across every facility."
+      },
+      {
+        "title": "Better decision-making",
+        "description": "Actionable dashboards and trained supervisors help you make faster, more confident decisions about staffing needs."
+      },
+      {
+        "title": "Lowering risk",
+        "description": "Compliance-focused processes, background-verified personnel and continuous training keep your business protected."
+      },
+      {
+        "title": "Flexibility for business",
+        "description": "Scale manpower support up or down with ease thanks to our wide network of skilled resources across Maharashtra."
+      }
+    ],
+    "marketInsights": {
+      "summary": "In today's tough business world, it's important to get the most out of your employees. A manpower management system can make a huge difference by streamlining processes, increasing output, and making workers happier and more engaged.",
+      "distribution": [
+        {
+          "label": "Housekeeping",
+          "value": 43.7,
+          "color": "#1d4ed8"
+        },
+        {
+          "label": "Security Services",
+          "value": 17.5,
+          "color": "#f97316"
+        },
+        {
+          "label": "Patient Care",
+          "value": 19.4,
+          "color": "#22c55e"
+        },
+        {
+          "label": "Pantry Services",
+          "value": 7.8,
+          "color": "#6366f1"
+        },
+        {
+          "label": "Travel Services",
+          "value": 11.7,
+          "color": "#0ea5e9"
+        }
+      ]
+    },
+    "clients": [
+      "BMX Cinemas",
+      "Cardinal Logistics & Forwarders LLC",
+      "Prabhat Centre",
+      "Acharya Shri Nanesh Hospital",
+      "Rajgobind Hospital",
+      "Mity Hospital",
+      "Atyadi Rehaklinik and Hospital",
+      "KSS Path Lab",
+      "Shreeji Travel Services",
+      "Tata Motors",
+      "Runet",
+      "Gangotri Apartments",
+      "Signal Power Press",
+      "Somany Plyood",
+      "JDM Group of Companies",
+      "Meat-N-More"
+    ],
     "contact": {
       "address": "Shop No. 69, Prabhat Centre, Sector 1A, Near NKGSB Bank, CBD Belapur, Navi Mumbai - 400614.",
-      "mobiles": ["+91 8080664545", "+91 9594664545"],
+      "mobiles": [
+        "+91 8080664545",
+        "+91 9594664545"
+      ],
       "email": "infozeigoservices@gmail.com",
       "website": "https://www.zeigoservices.com",
       "whatsapp": {
@@ -94,6 +182,23 @@
   ],
   "assets": {
     "logo": "/assets/zeigo-logo.png",
-    "heroImage": "cleaning-hero.jpg"
+    "gallery": {
+      "hero": {
+        "storagePath": "public/assets/gallery/hero-showcase.jpg",
+        "description": "Full-width hero banner showcasing ZEIGO's manpower and security team in action."
+      },
+      "team": {
+        "storagePath": "public/assets/gallery/team-collage.jpg",
+        "description": "Group photograph of the ZEIGO housekeeping and facility management crew."
+      },
+      "services": {
+        "storagePath": "public/assets/gallery/services-diagram.jpg",
+        "description": "Circular infographic representing housekeeping, security, travel, pantry and patient care services."
+      },
+      "cta": {
+        "storagePath": "public/assets/gallery/cta-office-building.jpg",
+        "description": "High-rise commercial building exterior for the closing contact call-to-action."
+      }
+    }
   }
 }
