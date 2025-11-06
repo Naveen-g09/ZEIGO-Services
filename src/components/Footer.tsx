@@ -99,8 +99,8 @@ const Footer: React.FC<FooterProps> = ({ companyName, tagline, contact, logoSrc 
                 <Clock className="mt-0.5 h-5 w-5 flex-shrink-0 text-sky-400" />
                 <div>
                   <p className="font-semibold text-white">Office Hours</p>
-                  <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
-                  <p>Sat: 9:00 AM - 2:00 PM</p>
+                  <p>Monday – Sunday: 9:00 AM – 6:00 PM</p>
+                  <p>Open daily with no holidays to support your operations.</p>
                 </div>
               </div>
             </div>
