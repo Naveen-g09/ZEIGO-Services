@@ -16,15 +16,15 @@ const ClientMarquee: React.FC<ClientMarqueeProps> = ({ clients }) => {
     <section aria-label="Client logo marquee" className="bg-slate-950 py-10 text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-6">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-sky-300">Trusted Collaborations</p>
               <h2 className="mt-3 text-2xl font-semibold text-white sm:text-3xl">
                 Partners who rely on ZEIGO Services
               </h2>
             </div>
-            <p className="hidden max-w-sm text-right text-sm text-slate-300 lg:block">
-              Upload each client logo to the paths listed in the data file to replace these placeholders and keep the carousel on brand.
+            <p className="max-w-sm text-sm text-slate-300">
+              Hospitals, manufacturers, housing societies and corporates who depend on our teams every single day.
             </p>
           </div>
 
@@ -34,9 +34,7 @@ const ClientMarquee: React.FC<ClientMarqueeProps> = ({ clients }) => {
 
             <div className="flex w-max animate-marquee gap-6" aria-hidden="true">
               {marqueeClients.map((client, index) => {
-                const title = client.logo
-                  ? `Replace with logo stored at ${client.logo.storagePath}${client.logo.description ? ` – ${client.logo.description}` : ''}`
-                  : undefined;
+                const title = client.logo?.description ?? client.name;
 
                 return (
                   <figure
@@ -52,27 +50,13 @@ const ClientMarquee: React.FC<ClientMarqueeProps> = ({ clients }) => {
                         loading="lazy"
                       />
                     ) : (
-                      <div className="flex h-full w-full flex-col items-center justify-center text-center">
-                        <span className="text-xs font-semibold uppercase tracking-[0.3em] text-sky-200">
-                          Client Logo
-                        </span>
-                        <span className="mt-2 text-sm font-semibold text-white">{client.name}</span>
-                        {client.logo?.storagePath && (
-                          <span className="mt-2 text-[10px] text-slate-200/70">
-                            {client.logo.storagePath.replace('public/', '')}
-                          </span>
-                        )}
-                      </div>
+                      <span className="text-center text-sm font-semibold text-white">{client.name}</span>
                     )}
                   </figure>
                 );
               })}
             </div>
           </div>
-
-          <p className="text-xs text-slate-300 lg:hidden">
-            Upload each logo file to the matching path (for example <code className="rounded bg-white/10 px-1">public/assets/clients/bmx-cinemas.png</code>) and update the data file when assets are ready.
-          </p>
         </div>
       </div>
     </section>

@@ -74,22 +74,204 @@
       ]
     },
     "clients": [
-      "BMX Cinemas",
-      "Cardinal Logistics & Forwarders LLC",
-      "Prabhat Centre",
-      "Acharya Shri Nanesh Hospital",
-      "Rajgobind Hospital",
-      "Mity Hospital",
-      "Atyadi Rehaklinik and Hospital",
-      "KSS Path Lab",
-      "Shreeji Travel Services",
-      "Tata Motors",
-      "Runet",
-      "Gangotri Apartments",
-      "Signal Power Press",
-      "Somany Plyood",
-      "JDM Group of Companies",
-      "Meat-N-More"
+      {
+        "name": "AIR Services",
+        "industry": "Aviation Support",
+        "logo": {
+          "src": "/assets/clients/air.jpg",
+          "storagePath": "public/assets/clients/air.jpg",
+          "description": "Logo for AIR Services"
+        }
+      },
+      {
+        "name": "Aar Hospital",
+        "industry": "Healthcare",
+        "logo": {
+          "src": "/assets/clients/ar-hospital.jpg",
+          "storagePath": "public/assets/clients/ar-hospital.jpg",
+          "description": "Logo for Aar Hospital"
+        }
+      },
+      {
+        "name": "BMX Cinemas",
+        "industry": "Entertainment",
+        "logo": {
+          "src": "/assets/clients/bmx-cinemas.jpg",
+          "storagePath": "public/assets/clients/bmx-cinemas.jpg",
+          "description": "Logo for BMX Cinemas"
+        }
+      },
+      {
+        "name": "Cardinal Logistics & Forwarders LLC",
+        "industry": "Logistics",
+        "logo": {
+          "src": "/assets/clients/cardinal.jpg",
+          "storagePath": "public/assets/clients/cardinal.jpg",
+          "description": "Logo for Cardinal Logistics & Forwarders LLC"
+        }
+      },
+      {
+        "name": "Das Group",
+        "industry": "Infrastructure",
+        "logo": {
+          "src": "/assets/clients/das-group.jpg",
+          "storagePath": "public/assets/clients/das-group.jpg",
+          "description": "Logo for Das Group"
+        }
+      },
+      {
+        "name": "Fugro",
+        "industry": "Engineering",
+        "logo": {
+          "src": "/assets/clients/fugro.jpg",
+          "storagePath": "public/assets/clients/fugro.jpg",
+          "description": "Logo for Fugro"
+        }
+      },
+      {
+        "name": "Gangotri Apartments",
+        "industry": "Residential Society",
+        "logo": {
+          "src": "/assets/clients/gangotri-apartments.jpg",
+          "storagePath": "public/assets/clients/gangotri-apartments.jpg",
+          "description": "Logo for Gangotri Apartments"
+        }
+      },
+      {
+        "name": "GN International",
+        "industry": "Trading",
+        "logo": {
+          "src": "/assets/clients/gn-international.jpg",
+          "storagePath": "public/assets/clients/gn-international.jpg",
+          "description": "Logo for GN International"
+        }
+      },
+      {
+        "name": "IDBI Bank",
+        "industry": "Financial Services",
+        "logo": {
+          "src": "/assets/clients/idbi.jpg",
+          "storagePath": "public/assets/clients/idbi.jpg",
+          "description": "Logo for IDBI Bank"
+        }
+      },
+      {
+        "name": "JDM Group of Companies",
+        "industry": "Corporate Group",
+        "logo": {
+          "src": "/assets/clients/jdm.jpg",
+          "storagePath": "public/assets/clients/jdm.jpg",
+          "description": "Logo for JDM Group of Companies"
+        }
+      },
+      {
+        "name": "KSS Path Lab",
+        "industry": "Diagnostics",
+        "logo": {
+          "src": "/assets/clients/kss-path-lab.jpg",
+          "storagePath": "public/assets/clients/kss-path-lab.jpg",
+          "description": "Logo for KSS Path Lab"
+        }
+      },
+      {
+        "name": "Meat-N-More",
+        "industry": "Retail",
+        "logo": {
+          "src": "/assets/clients/meat-n-more.jpg",
+          "storagePath": "public/assets/clients/meat-n-more.jpg",
+          "description": "Logo for Meat-N-More"
+        }
+      },
+      {
+        "name": "MITR Hospital",
+        "industry": "Healthcare",
+        "logo": {
+          "src": "/assets/clients/mitr-hospital.jpg",
+          "storagePath": "public/assets/clients/mitr-hospital.jpg",
+          "description": "Logo for MITR Hospital"
+        }
+      },
+      {
+        "name": "Acharya Shri Nanesh Hospital",
+        "industry": "Healthcare",
+        "logo": {
+          "src": "/assets/clients/nanesh-hospital.jpg",
+          "storagePath": "public/assets/clients/nanesh-hospital.jpg",
+          "description": "Logo for Acharya Shri Nanesh Hospital"
+        }
+      },
+      {
+        "name": "Prabhat Centre",
+        "industry": "Commercial Complex",
+        "logo": {
+          "src": "/assets/clients/prabhat-centre.jpg",
+          "storagePath": "public/assets/clients/prabhat-centre.jpg",
+          "description": "Logo for Prabhat Centre"
+        }
+      },
+      {
+        "name": "Rajgobind Hospital",
+        "industry": "Healthcare",
+        "logo": {
+          "src": "/assets/clients/rajgobind-hospital.jpg",
+          "storagePath": "public/assets/clients/rajgobind-hospital.jpg",
+          "description": "Logo for Rajgobind Hospital"
+        }
+      },
+      {
+        "name": "Shreeji Travel Services",
+        "industry": "Travel & Mobility",
+        "logo": {
+          "src": "/assets/clients/shreeji-travel-services.jpg",
+          "storagePath": "public/assets/clients/shreeji-travel-services.jpg",
+          "description": "Logo for Shreeji Travel Services"
+        }
+      },
+      {
+        "name": "Shriram Asset Management",
+        "industry": "Financial Services",
+        "logo": {
+          "src": "/assets/clients/shriram-asset-management.jpg",
+          "storagePath": "public/assets/clients/shriram-asset-management.jpg",
+          "description": "Logo for Shriram Asset Management"
+        }
+      },
+      {
+        "name": "Signal Power Press",
+        "industry": "Manufacturing",
+        "logo": {
+          "src": "/assets/clients/signal-power-press.png",
+          "storagePath": "public/assets/clients/signal-power-press.png",
+          "description": "Logo for Signal Power Press"
+        }
+      },
+      {
+        "name": "Tata Motors",
+        "industry": "Automotive",
+        "logo": {
+          "src": "/assets/clients/tata-motors.jpg",
+          "storagePath": "public/assets/clients/tata-motors.jpg",
+          "description": "Logo for Tata Motors"
+        }
+      },
+      {
+        "name": "Trunet",
+        "industry": "Manufacturing",
+        "logo": {
+          "src": "/assets/clients/trunet.jpg",
+          "storagePath": "public/assets/clients/trunet.jpg",
+          "description": "Logo for Trunet"
+        }
+      },
+      {
+        "name": "UTI",
+        "industry": "Financial Services",
+        "logo": {
+          "src": "/assets/clients/uti.jpg",
+          "storagePath": "public/assets/clients/uti.jpg",
+          "description": "Logo for UTI"
+        }
+      }
     ],
     "contact": {
       "address": "Shop No. 69, Prabhat Centre, Sector 1A, Near NKGSB Bank, CBD Belapur, Navi Mumbai - 400614.",
@@ -184,8 +366,9 @@
     "logo": "/assets/zeigo-logo.png",
     "gallery": {
       "hero": {
+        "src": "/assets/gallery/hero-showcase.jpg",
         "storagePath": "public/assets/gallery/hero-showcase.jpg",
-        "description": "Full-width hero banner showcasing ZEIGO's manpower and security team in action."
+        "description": "Portrait of CEO Anil B. Kudale representing ZEIGO Services leadership."
       },
       "team": {
         "storagePath": "public/assets/gallery/team-collage.jpg",
