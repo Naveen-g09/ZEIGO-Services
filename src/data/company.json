@@ -75,8 +75,8 @@
     },
     "clients": [
       {
-        "name": "AIR Services",
-        "industry": "Aviation Support",
+        "name": "Ajr Oil & Gas",
+        "industry": "Ajr Oil & Gas Engineering Services Pvt Ltd",
         "logo": {
           "src": "/assets/clients/air.jpg",
           "storagePath": "public/assets/clients/air.jpg",
@@ -84,7 +84,7 @@
         }
       },
       {
-        "name": "Aar Hospital",
+        "name": "Moralwar Hospital",
         "industry": "Healthcare",
         "logo": {
           "src": "/assets/clients/ar-hospital.jpg",
@@ -256,7 +256,7 @@
       },
       {
         "name": "Trunet",
-        "industry": "Manufacturing",
+        "industry": "Internet Provider",
         "logo": {
           "src": "/assets/clients/trunet.jpg",
           "storagePath": "public/assets/clients/trunet.jpg",
@@ -270,6 +270,15 @@
           "src": "/assets/clients/uti.jpg",
           "storagePath": "public/assets/clients/uti.jpg",
           "description": "Logo for UTI"
+        }
+      },
+      {
+        "name": "VAMC HOSPITAL",
+        "industry": "Healthcare",
+        "logo": {
+          "src": "/assets/clients/vamc.jpg",
+          "storagePath": "public/assets/clients/uti.jpg",
+          "description": "Logo for VAMC HOSPITAL"
         }
       }
     ],
