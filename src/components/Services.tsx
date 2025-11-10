@@ -121,17 +121,25 @@ const Services: React.FC<ServicesProps> = ({ services, diagramAsset }) => {
 
               <div className="grid gap-6 sm:grid-cols-2">
                 {individualServices.map((service) => (
-                  <div key={service.name} className="flex h-full flex-col rounded-2xl bg-white p-6 shadow-md">
-                    <div className="rounded-2xl bg-gradient-to-br from-slate-900 via-blue-900 to-sky-800 p-5 text-white shadow-inner">
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-white/70">Image Placeholder</p>
-                      <p className="mt-3 text-sm text-white/80">{service.asset.description}</p>
-                      <p className="mt-4 text-[11px] text-white/80">
-                        Upload at
-                        <span className="mt-1 block font-mono text-xs text-white">{service.asset.storagePath.replace('public/', '')}</span>
-                      </p>
+                  <div
+                    key={service.name}
+                    className="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-slate-200"
+                  >
+                    <div className="relative">
+                      <ImagePlaceholder
+                        asset={service.asset}
+                        alt={`${service.name} specialist support`}
+                        className="h-40 w-full"
+                        rounded="rounded-none"
+                      />
+                      <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-700 shadow-sm">
+                        <span>Specialist</span>
+                      </div>
                     </div>
-                    <h4 className="mt-6 text-lg font-semibold text-slate-900">{service.name}</h4>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-600">{service.description}</p>
+                    <div className="flex flex-1 flex-col p-6">
+                      <h4 className="text-lg font-semibold text-slate-900">{service.name}</h4>
+                      <p className="mt-2 text-sm leading-relaxed text-slate-600">{service.description}</p>
+                    </div>
                   </div>
                 ))}
               </div>
