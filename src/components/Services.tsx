@@ -28,7 +28,8 @@ const Services: React.FC<ServicesProps> = ({ services, diagramAsset }) => {
       name: 'Qualified Drivers',
       description: 'Verified drivers available for corporate and personal travel needs.',
       asset: {
-        storagePath: 'public/assets/gallery/specialist-drivers.jpg',
+        src: '/assets/gallery/specialist-drivers.jpeg',
+        storagePath: 'public/assets/gallery/specialist-drivers.jpeg',
         description: "Upload a photo representing on-demand drivers or travel support."
       }
     },
@@ -36,6 +37,7 @@ const Services: React.FC<ServicesProps> = ({ services, diagramAsset }) => {
       name: 'Carpenters',
       description: 'Skilled carpenters for repairs, fittings and minor renovations.',
       asset: {
+        src: '/assets/gallery/specialist-carpenters.jpg',
         storagePath: 'public/assets/gallery/specialist-carpenters.jpg',
         description: 'Add an image showcasing carpentry work or tools.'
       }
@@ -44,6 +46,7 @@ const Services: React.FC<ServicesProps> = ({ services, diagramAsset }) => {
       name: 'Plumbers',
       description: 'On-call plumbers for leak fixes, maintenance and installations.',
       asset: {
+        src: '/assets/gallery/specialist-plumbers.jpg',
         storagePath: 'public/assets/gallery/specialist-plumbers.jpg',
         description: 'Use a plumbing-related image for this card.'
       }
@@ -52,6 +55,7 @@ const Services: React.FC<ServicesProps> = ({ services, diagramAsset }) => {
       name: 'Electricians',
       description: 'Certified electricians for safe troubleshooting and upgrades.',
       asset: {
+        src: '/assets/gallery/specialist-electricians.jpg',
         storagePath: 'public/assets/gallery/specialist-electricians.jpg',
         description: 'Upload an electrical maintenance or safety themed image.'
       }
@@ -60,7 +64,8 @@ const Services: React.FC<ServicesProps> = ({ services, diagramAsset }) => {
       name: 'Painters',
       description: 'Experienced painters for touch-ups and planned repainting.',
       asset: {
-        storagePath: 'public/assets/gallery/specialist-painters.jpg',
+        src: '/assets/gallery/specialist-painters.jpeg',
+        storagePath: 'public/assets/gallery/specialist-painters.jpeg',
         description: 'Add a painting/renovation themed image for this service.'
       }
     }
