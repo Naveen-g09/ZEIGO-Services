@@ -309,7 +309,7 @@
         "Society maintenance",
         "Mix of ex-servicemen and civilian personnel"
       ],
-      "image": "hospital-facility.jpg",
+      "image": "hospital-facility.png",
       "alt": "Training session for hospital housekeeping crew"
     },
     {
@@ -326,7 +326,7 @@
         "Zero driver refusals or hidden surcharges",
         "Qualified drivers on demand"
       ],
-      "image": "travel-fleet.jpg",
+      "image": "travel-fleet.png",
       "alt": "White van and silver SUV representing ZEIGO fleet"
     },
     {
@@ -342,7 +342,7 @@
         "FORM-16 issuance",
         "Fully customisable packages"
       ],
-      "image": "hr-payroll.jpg",
+      "image": "hr-payroll.png",
       "alt": "Hands working on payroll with notebook and calculator"
     },
     {
@@ -355,7 +355,7 @@
         "Guards with rich defence background",
         "Employee vetting and role-specific training"
       ],
-      "image": "commercial-security.jpg",
+      "image": "commercial-security.png",
       "alt": "Security guard with walkie-talkie in lobby"
     },
     {
@@ -367,7 +367,7 @@
         "Landscape development projects",
         "Technical staff with proven client success"
       ],
-      "image": "garden-maintenance.jpg",
+      "image": "garden-maintenance.png",
       "alt": "Gardener tending flower beds"
     }
   ],
@@ -384,8 +384,8 @@
         "description": "Group photograph of the ZEIGO housekeeping and facility management crew."
       },
       "services": {
-        "src": "/assets/gallery/service-ecosystem.png",
-        "storagePath": "public/assets/gallery/service-ecosystem.png",
+        "src": "/assets/service-ecosystem.png",
+        "storagePath": "public/assets/service-ecosystem.png",
         "description": "Service ecosystem graphic connecting ZEIGO's housekeeping, security, travel, pantry and patient care offerings."
       },
       "cta": {

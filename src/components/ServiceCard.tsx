@@ -29,7 +29,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
       return localImageMap[imageName];
     }
 
-    
+    return `/assets/${imageName}`;
   };
 
   return (
