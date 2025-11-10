@@ -17,14 +17,19 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   const getServiceImage = (imageName: string) => {
     // Map service images to appropriate Pexels URLs
-    const imageMap: { [key: string]: string } = {
-      'hospital-facility.jpg': 'https://images.pexels.com/photos/263337/pexels-photo-263337.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'travel-fleet.jpg': 'https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'hr-payroll.jpg': 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'commercial-security.jpg': 'https://images.pexels.com/photos/8369648/pexels-photo-8369648.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'garden-maintenance.jpg': 'https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=800'
+      const localImageMap: Record<string, string> = {
+      'hospital-facility.png': '/assets/hospital-facility.png',
+      'travel-fleet.png': '/assets/travel-fleet.png',
+      'hr-payroll.png': '/assets/hr-payroll.png',
+      'commercial-security.png': '/assets/commercial-security.png',
+      'garden-maintenance.png': '/assets/garden-maintenance.png'
     };
-    return imageMap[imageName] || 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800';
+    
+    if (localImageMap[imageName]) {
+      return localImageMap[imageName];
+    }
+
+    
   };
 
   return (

@@ -384,8 +384,9 @@
         "description": "Group photograph of the ZEIGO housekeeping and facility management crew."
       },
       "services": {
-        "storagePath": "public/assets/gallery/services-diagram.jpg",
-        "description": "Circular infographic representing housekeeping, security, travel, pantry and patient care services."
+        "src": "/assets/gallery/service-ecosystem.png",
+        "storagePath": "public/assets/gallery/service-ecosystem.png",
+        "description": "Service ecosystem graphic connecting ZEIGO's housekeeping, security, travel, pantry and patient care offerings."
       },
       "cta": {
         "storagePath": "public/assets/gallery/cta-office-building.jpg",
