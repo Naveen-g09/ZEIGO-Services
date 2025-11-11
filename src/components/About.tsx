@@ -1,6 +1,50 @@
 import React from 'react';
 import { Target, Eye, Building, Quote } from 'lucide-react';
-import ImagePlaceholder, { GalleryAsset } from './ImagePlaceholder';
+import TeamShowcase from './TeamShowcase';
+import type { GalleryAsset } from './ImagePlaceholder';
+
+const HOUSEKEEPING_TEAM_IMAGES = [
+  {
+    src: '/assets/gallery/workers/worker-100.jpg',
+    alt: 'ZEIGO housekeeping specialist disinfecting a corporate lobby floor.',
+  },
+  {
+    src: '/assets/gallery/workers/worker-103.jpg',
+    alt: 'Operations lead briefing onsite cleaning crew before a shift.',
+  },
+  {
+    src: '/assets/gallery/workers/worker-106.jpg',
+    alt: 'Housekeeping team member polishing glass partitions in an office.',
+  },
+  {
+    src: '/assets/gallery/workers/worker-110.jpg',
+    alt: 'ZEIGO associate sanitising high-touch areas inside an elevator lobby.',
+  },
+  {
+    src: '/assets/gallery/workers/worker-116.jpg',
+    alt: 'Housekeeping crew coordinating material dispatch with walkie-talkies.',
+  },
+  {
+    src: '/assets/gallery/workers/worker-121.jpg',
+    alt: 'Team member preparing eco-friendly cleaning supplies for deployment.',
+  },
+  {
+    src: '/assets/gallery/workers/worker-128.jpg',
+    alt: 'Facility attendant monitoring checklists during a service round.',
+  },
+  {
+    src: '/assets/gallery/workers/worker-133.jpg',
+    alt: 'Night shift staff supervising floor mopping inside a commercial complex.',
+  },
+  {
+    src: '/assets/gallery/workers/worker-140.jpg',
+    alt: 'Housekeeping professional arranging tools at the operations base.',
+  },
+  {
+    src: '/assets/gallery/workers/worker-145.jpg',
+    alt: 'ZEIGO facility associate smiling while wrapping up a maintenance task.',
+  },
+];
 
 interface LeadershipInfo {
   name: string;
@@ -72,7 +116,12 @@ const About: React.FC<AboutProps> = ({ overview, vision, mission, leadership, im
 
           <div className="relative">
             <div className="absolute inset-0 -z-10 rounded-[2.5rem] bg-gradient-to-br from-blue-500/20 to-sky-500/20 blur-3xl" />
-            <ImagePlaceholder asset={imageAsset} alt="Housekeeping team" className="h-full min-h-[360px]" />
+            <TeamShowcase
+              images={HOUSEKEEPING_TEAM_IMAGES}
+              title="Housekeeping team"
+              tagline={imageAsset?.description ?? 'Glances from our on-ground crew keeping client spaces spotless.'}
+              fallbackAsset={imageAsset}
+            />
           </div>
         </div>
       </div>
