@@ -8,7 +8,7 @@ interface TeamImage {
 
 interface TeamShowcaseProps {
   images: TeamImage[];
-  title: string;
+  title?: string;
   tagline?: string;
   intervalMs?: number;
   fallbackAsset?: GalleryAsset;
@@ -63,7 +63,7 @@ const TeamShowcase: React.FC<TeamShowcaseProps> = ({
 
   if (!hasImages) {
     return (
-      <ImagePlaceholder asset={fallbackAsset} alt={title} className="h-full min-h-[360px]" rounded="rounded-[2.5rem]" />
+      <ImagePlaceholder asset={fallbackAsset} alt={title ?? ""} className="h-full min-h-[360px]" rounded="rounded-[2.5rem]" />
     );
   }
 
@@ -79,7 +79,7 @@ const TeamShowcase: React.FC<TeamShowcaseProps> = ({
           key={image.src}
           src={image.src!}
           alt={image.alt}
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-out ${
+          className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-700 ease-out ${
             index === activeIndex ? 'opacity-100' : 'opacity-0'
           }`}
           loading={index === 0 ? 'eager' : 'lazy'}
@@ -90,16 +90,16 @@ const TeamShowcase: React.FC<TeamShowcaseProps> = ({
 
       <div className="absolute inset-0 flex flex-col justify-between p-8 md:p-10">
         <div className="flex items-center gap-3">
-          <span className="inline-flex items-center rounded-full bg-white/10 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.35em] text-sky-100">
+          {/* <span className="inline-flex items-center rounded-full bg-white/10 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.35em] text-sky-100">
             Real team in action
-          </span>
+          </span> */}
           <span className="text-xs text-sky-100/80">{String(activeIndex + 1).padStart(2, '0')} / {String(preparedImages.length).padStart(2, '0')}</span>
         </div>
 
-        <div className="max-w-md">
+        {/* <div className="max-w-md">
           <h3 className="text-2xl font-semibold leading-snug sm:text-3xl">{title}</h3>
           {tagline ? <p className="mt-2 text-sm text-slate-100/80 sm:text-base">{tagline}</p> : null}
-        </div>
+        </div> */}
       </div>
 
       <div className="absolute inset-x-8 bottom-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -128,7 +128,7 @@ const TeamShowcase: React.FC<TeamShowcaseProps> = ({
 
         <div className="flex items-center gap-3">
           <figure className="relative hidden h-16 w-16 overflow-hidden rounded-2xl border border-white/20 bg-white/5 shadow-lg shadow-slate-900/40 sm:block">
-            <img src={previousImage.src!} alt={previousImage.alt} className="h-full w-full object-cover opacity-90" loading="lazy" />
+            <img src={previousImage.src!} alt={previousImage.alt} className="h-full w-full object-center opacity-90" loading="lazy" />
             <figcaption className="absolute inset-0 bg-gradient-to-tr from-slate-900/80 to-transparent text-[10px] uppercase tracking-[0.2em] text-white/70 backdrop-blur-sm">
               <span className="absolute bottom-2 left-2">Previous</span>
             </figcaption>
@@ -149,18 +149,20 @@ const TeamShowcase: React.FC<TeamShowcaseProps> = ({
       </div>
 
       <div className="absolute bottom-4 left-1/2 hidden w-[70%] -translate-x-1/2 justify-center gap-1 sm:flex">
-        {preparedImages.map((_, index) => (
-          <button
-            key={index}
-            type="button"
-            onClick={() => goToSlide(index)}
-            className={`h-1.5 w-6 rounded-full transition-all duration-300 ${
-              index === activeIndex ? 'bg-white shadow-[0_0_0_1px_rgba(255,255,255,0.6)]' : 'bg-white/30 hover:bg-white/60'
-            }`}
-            aria-label={`Show team photo ${index + 1}`}
-          />
-        ))}
-      </div>
+  {preparedImages.map((_, index) => (
+    <button
+      key={index}
+      type="button"
+      onClick={() => goToSlide(index)}
+      className={`h-1.5 w-6 rounded-full transition-all duration-300 ${
+        index === activeIndex
+          ? 'bg-white shadow-[0_0_0_1px_rgba(255,255,255,0.6)]'
+          : 'bg-white/30 hover:bg-white/60'
+      }`}
+      aria-label={`Show team photo ${index + 1}`}
+    />
+  ))}
+</div>
     </div>
   );
 };

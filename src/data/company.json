@@ -381,7 +381,7 @@
       },
       "team": {
         "storagePath": "public/assets/gallery/team-collage.jpg",
-        "description": "Group photograph of the ZEIGO housekeeping and facility management crew."
+        "description": ""
       },
       "services": {
         "src": "/assets/service-ecosystem.png",
